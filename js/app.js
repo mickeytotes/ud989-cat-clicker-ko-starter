@@ -9,9 +9,9 @@ var ViewModel = function() {
 			return "Infant";
 		}
 
-		if(this.clickCount >= 10) {
-			return "Kitten";
-		}
+		//if(this.clickCount >= 10) {
+		//	return "Kitten";
+		//}
 	}, this);
 
 	this.incrementCounter = function() {

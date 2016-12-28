@@ -23,11 +23,13 @@ var ViewModel = function() {
 		this.clickCount(this.clickCount() + 1);
 	}
 
-	//this.changeLevel = ko.computed(function(){
-	//	if(clickCount > 10) {
-	//		this.level('Kitten');
-	//	}
-	//}, this);
+	this.nickNames = ko.observableArray([
+		{nName: 'Dirk'},
+		{nName: 'Tchaikovski'},
+		{nName: 'Coolio'},
+		{nName: 'Bingo'},
+		{nName: 'Greg Allman'}
+		]);
 }
 
 ko.applyBindings(new ViewModel());

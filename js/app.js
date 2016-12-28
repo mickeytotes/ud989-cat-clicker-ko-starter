@@ -8,10 +8,10 @@ var ViewModel = function() {
 		if(this.clickCount() < 10) {
 			return "Infant";
 		}
-		if(this.clickCount() >= 10) {
+		if(this.clickCount() >= 10 && this.clickCount() < 49) {
 			return "Kitten";
 		}
-		if(this.clickCount() >= 50) {
+		if(this.clickCount() >= 50 && this.clickCount() < 100) {
 			return "Teen";
 		}
 		if(this.clickCount() >= 100) {

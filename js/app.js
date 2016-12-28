@@ -5,11 +5,11 @@ var ViewModel = function() {
 	this.imgAttribute = ko.observable('https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg');
 	//this.level = ko.observable('Infant');
 	this.level = ko.computed(function() {
-		if(clickCount < 10) {
+		if(this.clickCount < 10) {
 			return "Infant";
 		}
 
-		if(clickCount >= 10) {
+		if(this.clickCount >= 10) {
 			return "Kitten";
 		}
 	}, this);

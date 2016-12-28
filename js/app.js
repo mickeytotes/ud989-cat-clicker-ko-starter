@@ -11,6 +11,12 @@ var ViewModel = function() {
 		if(this.clickCount() >= 10) {
 			return "Kitten";
 		}
+		if(this.clickCount() >= 50) {
+			return "Teen";
+		}
+		if(this.clickCount() >= 100) {
+			return "Young Scrappy";
+		}
 	}, this);
 
 	this.incrementCounter = function() {

@@ -1,15 +1,9 @@
-var Cat = function() {
-	this.clickCount = ko.observable(0);
-	this.name = ko.observable('Tabby');
-	this.imgSrc = ko.observable('img/cat-animal.jpeg');
-	this.imgAttribute = ko.observable('https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg');
-	this.nickNames = ko.observableArray([
-		{nName: 'Dirk'},
-		{nName: 'Tchaikovski'},
-		{nName: 'Coolio'},
-		{nName: 'Bingo'},
-		{nName: 'Greg Allman'}
-		]);
+var Cat = function(data) {
+	this.clickCount = ko.observable(data.clickCount);
+	this.name = ko.observable(data.name);
+	this.imgSrc = ko.observable(data.imgSrc);
+	this.imgAttribute = ko.observable(data.imgAttribute);
+	this.nickNames = ko.observableArray(data.nickNames);
 
 	this.level = ko.computed(function() {
 		if(this.clickCount() < 10) {
@@ -29,7 +23,19 @@ var Cat = function() {
 
 var ViewModel = function() {
 
-	this.currentCat = ko.observable(new Cat());
+	this.currentCat = ko.observable(new Cat({
+		clickCount: 0,
+		name: 'Tabby',
+		imgSrc: 'img/cat-animal.jpeg',
+		imgAttribute: 'https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg',
+		nickNames: [
+		{nName: 'Dirk'},
+		{nName: 'Tchaikovski'},
+		{nName: 'Coolio'},
+		{nName: 'Bingo'},
+		{nName: 'Greg Allman'}
+		]
+	}));
 
 	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);

@@ -8,13 +8,13 @@
     <ul id="cat-list"></ul>
     <div id="cat">
 
-        <h2 id="cat-name" data-bind="text: name"></h2>
-        <h3 data-bind="text: level"></h3>
-        <div id="cat-count" data-bind="text: clickCount"></div>
+        <h2 id="cat-name" data-bind="text: currentCat().name"></h2>
+        <h3 data-bind="text: currentCat().level"></h3>
+        <div id="cat-count" data-bind="text: currentCat().clickCount"></div>
         <img id="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter, attr: {src: imgSrc}">
         <h3>Nick Names</h3>
-        <ul data-bind="foreach: nickNames">
-            <li data-bind="text: nName"></li>
+        <ul data-bind="foreach: currentCat().nickNames">
+            <li data-bind="text: currentCat().nName"></li>
         </ul>
 
     </div>

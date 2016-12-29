@@ -1,3 +1,41 @@
+var initialCats = [
+	{
+		name: "Toby",
+		imgSrc: "img/happy-kitten.jpg",
+		clickCount: 0,
+		imgAttribute: 'n/a',
+		nickNames: ['Waiting-cat', 'Kilter', 'Ray']
+	},
+	{
+		name: "Cecile",
+		imgSrc: "img/screaming.jpeg",
+		clickCount: 0,
+		imgAttribute: 'n/a',
+		nickNames: ['Rose', 'China Doll', 'Texas Doll', 'Hank']
+	},
+	{
+		name: "Johnson",
+		imgSrc: "img/bald-cat.jpg",
+		clickCount: 0,
+		imgAttribute: 'n/a',
+		nickNames: ['Noni', 'Lady Licker', 'Ball', 'Twang']
+	},
+	{
+		name: "Olivia",
+		imgSrc: "img/waiting-cat.jpg",
+		clickCount: 0,
+		imgAttribute: 'n/a',
+		nickNames: ['Hamlette', 'Fly Catcher', 'Psudo', 'Eyes']
+	},
+	{
+		name: "Stormio",
+		imgSrc: "img/duh-cat.jpg",
+		clickCount: 0,
+		imgAttribute: 'n/a',
+		nickNames:['Strongy', 'Effy', 'Dong']
+	}
+]
+
 var Cat = function(data) {
 	this.clickCount = ko.observable(data.clickCount);
 	this.name = ko.observable(data.name);
@@ -28,13 +66,7 @@ var ViewModel = function() {
 		name: 'Tabby',
 		imgSrc: 'img/cat-animal.jpeg',
 		imgAttribute: 'https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg',
-		nickNames: [
-		{nName: 'Dirk'},
-		{nName: 'Tchaikovski'},
-		{nName: 'Coolio'},
-		{nName: 'Bingo'},
-		{nName: 'Greg Allman'}
-		]
+		nickNames: ['Dirk', 'Tchaikovski', 'Coolio', 'Bingo', 'Greg Allman']
 	}));
 
 	this.incrementCounter = function() {

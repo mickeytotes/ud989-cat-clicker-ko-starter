@@ -75,7 +75,7 @@ var ViewModel = function() {
 	}
 
 	this.setCurrentCat = function(i) {
-		this.currentCat = this.currentCat(this.catList()[i]);
+		this.currentCat(this.catList()[i]);
 	}
 }
 

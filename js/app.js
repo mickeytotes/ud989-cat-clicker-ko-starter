@@ -60,6 +60,13 @@ var Cat = function(data) {
 }
 
 var ViewModel = function() {
+	var self = this;
+
+	this.catList = ko.observableArray([]);
+
+	initialCats.forEach(function(catItem){
+		self.catList.push(new Cat(catItem));
+	});
 
 	this.currentCat = ko.observable(new Cat({
 		clickCount: 0,

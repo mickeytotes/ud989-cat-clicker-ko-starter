@@ -74,8 +74,8 @@ var ViewModel = function() {
 		this.clickCount(this.clickCount() + 1);
 	}
 
-	this.setCurrentCat = function(i) {
-		this.catList()[i];
+	this.setCurrentCat = function() {
+		return Cat;
 	}
 }
 

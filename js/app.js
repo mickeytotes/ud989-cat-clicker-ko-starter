@@ -68,13 +68,7 @@ var ViewModel = function() {
 		self.catList.push(new Cat(catItem));
 	});
 
-	this.currentCat = ko.observable(new Cat({
-		clickCount: 0,
-		name: 'Tabby',
-		imgSrc: 'img/cat-animal.jpeg',
-		imgAttribute: 'https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg',
-		nickNames: ['Dirk', 'Tchaikovski', 'Coolio', 'Bingo', 'Greg Allman']
-	}));
+	this.currentCat = ko.observable(this.catList()[0]);
 
 	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);
